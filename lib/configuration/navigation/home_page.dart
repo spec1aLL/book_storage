@@ -1,3 +1,4 @@
+import 'package:book_storage/domain/models/book_info.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:book_storage/core/App.dart';
@@ -31,29 +32,28 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Row(
-              children: [
-            const Text('Your name is Ivan'),
-              Icon(CupertinoIcons.arrow_right_circle),
-        ]
-            ),
-            const Text('You have pushed the button this many times:',),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
+      body: BookShotInfoWidget(
+
+      )
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
     );
+  }
+}
+
+class BookShotInfoWidget extends StatelessWidget {
+  final BookInfo bookInfo;
+
+
+  const BookShotInfoWidget({
+
+})
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    throw UnimplementedError();
   }
 }
