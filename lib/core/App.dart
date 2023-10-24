@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:book_storage/features/library/library_page.dart';
 import 'package:book_storage/configuration/navigation/home_page.dart';
 
 class App extends StatelessWidget {
@@ -6,13 +7,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+   return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+     home: LibraryPage(),
     );
   }
 }
